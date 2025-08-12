@@ -1,0 +1,24 @@
+spring.application.name=QA_Automation
+
+# C?u h�nh MySQL
+spring.datasource.url=jdbc:mysql://${MYSQLHOST}:${MYSQLPORT}/${MYSQLDATABASE}?useSSL=false&serverTimezone=UTC
+spring.datasource.username=${MYSQLUSER}
+spring.datasource.password=${MYSQLPASSWORD}
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+# C?u h�nh email (Gmail)
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=${EMAIL_USER}
+spring.mail.password=${EMAIL_PASS}
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+# C?u h�nh JWT
+jwt.secret=${JWT_SECRET}
+
+# C?u h�nh URL FastAPI
+fastapi.url=${MODEL_URL:8000}
+server.port=${PORT:8080}
